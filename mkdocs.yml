@@ -1,1 +1,54 @@
-site_name: My Docs
+site_name: Computer Graphics
+
+theme:
+  name: material
+     
+  palette:
+    scheme: slate
+    primary: teal
+    accent: light blue
+
+  icon:
+    logo: material/network
+    favicon: material/graphic_eq
+
+  features:
+    - content.tabs.link
+    - navigation.tabs
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Programs : 
+    - DDA Line Drawing Algorithm : Programs/dda.md
+    - Bresenham Line Drawing Algorithm : Programs/bresnham.md
+    - Circle Drawing Algorithm : Programs/circle.md
+    - Midpoint Circle Drawing Algorithm : Programs/midpoint.md
+    - Boundary Fill Algorithm : Programs/boundry.md
+  
+    
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kunal-khairnar-05
+      name: Kunal Khairnar
+
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true

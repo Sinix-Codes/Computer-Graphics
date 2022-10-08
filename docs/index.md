@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# **Computer Graphics using C language** 🖼️
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This repository contains the source code for the Computer Graphics using C language course. 
 
-## Commands
+## **Computer Graphics** 🎨
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Computer graphics is the study of digital visual contents, and involves synthesis and manipulation of image data. It is a subfield of computer science and it is related to computer vision, computational geometry, and computational photography.
 
-## Project layout
+## **C language** 📜
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope, and recursion, while a static type system prevents many unintended operations. By design, C provides constructs that map efficiently to typical machine instructions, and therefore it has found lasting use in applications that had formerly been coded in assembly language, including operating systems, as well as various application software for computers ranging from supercomputers to embedded systems.
