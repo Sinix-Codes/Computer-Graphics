@@ -12,7 +12,7 @@ Every pixel in the region may be reached by combining moves in only four directi
 
 ```c
 void boundryFill(int x, int y, int f_color, int b_color) {
-    if (getpixel(x, y) == b_color && getpixel(x, y) != f_color) {
+    if (getpixel(x, y) != b_color && getpixel(x, y) != f_color) {
         putpixel(x, y, f_color);
         boundryFill(x + 1, y, f_color, b_color); // left
         boundryFill(x, y + 1, f_color, b_color); // up
@@ -21,7 +21,6 @@ void boundryFill(int x, int y, int f_color, int b_color) {
     }
 }
 ```
-![4-connected](./4-connected.png)
 
 ## Example
 
@@ -32,7 +31,7 @@ The following example uses boundry fill algorithm to fill the rectangle.
 #include <graphics.h>
 
 void boundryFill(int x, int y, int f_color, int b_color) {
-    if (getpixel(x, y) == b_color && getpixel(x, y) != f_color) {
+    if (getpixel(x, y) != b_color && getpixel(x, y) != f_color) {
         putpixel(x, y, f_color);
         boundryFill(x + 1, y, f_color, b_color); // left
         boundryFill(x, y + 1, f_color, b_color); // up
@@ -59,7 +58,3 @@ int main() {
     return EXIT_SUCCESS;
 }
 ```
-
-## Output
-
-![Boundry Fill Output](./boundry-fill.gif)
