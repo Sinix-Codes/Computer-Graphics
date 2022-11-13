@@ -1,4 +1,4 @@
-// C-program for circle drawing
+```// C-program for circle drawing
 // using Bresenham’s Algorithm
 // in computer-graphics
 #include <stdio.h>
@@ -61,3 +61,4 @@ int main()
     delay(5000);
 	return 0;
 }
+```
