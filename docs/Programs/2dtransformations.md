@@ -9,33 +9,35 @@ $$\begin{bmatrix} 1 & 0 & tx \\ 0 & 1 & ty \\ 0 & 0 & 1 \end{bmatrix}$$
 where tx and ty are the distances to be moved in the x and y direction respectively.
 ![2D Translation](2D-Translation-300x245.png)
 
-```C
-    #include <stdio.h>
-    #include <graphics.h>
+=== "C"
 
-    int main() 
-    {
-        int gd = DETECT, gm;
-        int x1, y1, x2, y2, tx, ty;
+    ```C
+        #include <stdio.h>
+        #include <graphics.h>
 
-        initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
+        int main() 
+        {
+            int gd = DETECT, gm;
+            int x1, y1, x2, y2, tx, ty;
 
-        printf("Enter the staring Co-ordinates : ");
-        scanf("%d %d", &x1, &y1);
+            initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
 
-        printf("Enter the end Co-ordinates : ");
-        scanf("%d %d", &x2, &y2);
+            printf("Enter the staring Co-ordinates : ");
+            scanf("%d %d", &x1, &y1);
 
-        printf("Enter the translation Co-ordinates : ");
-        scanf("%d %d", &tx, &ty);
+            printf("Enter the end Co-ordinates : ");
+            scanf("%d %d", &x2, &y2);
 
-        rectangle(x1, y1, x2, y2);
-        rectangle(x1 + tx, y1 + ty, x2 + tx, y2 + ty);
+            printf("Enter the translation Co-ordinates : ");
+            scanf("%d %d", &tx, &ty);
 
-        return EXIT_SUCCESS;
-    }
+            rectangle(x1, y1, x2, y2);
+            rectangle(x1 + tx, y1 + ty, x2 + tx, y2 + ty);
 
-```
+            return EXIT_SUCCESS;
+        }
+
+    ```
 ---
 
 ## 2D Scaling
@@ -46,32 +48,34 @@ $$\begin{bmatrix} sx & 0 & 0 \\ 0 & sy & 0 \\ 0 & 0 & 1 \end{bmatrix}$$
 where sx and sy are the scaling factors in the x and y direction respectively.
 ![2D Scaling](Scaling-in-Computer-Graphics-Problem-1-Solution-300x124.png)
 
-```C
-    #include <stdio.h>
-    #include <graphics.h>
+=== "C"
 
-    int main() 
-    {
-        int gd = DETECT, gm;
-        int x1, y1, x2, y2, sx, sy;
+    ```C
+        #include <stdio.h>
+        #include <graphics.h>
 
-        initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
+        int main() 
+        {
+            int gd = DETECT, gm;
+            int x1, y1, x2, y2, sx, sy;
 
-        printf("Enter the staring Co-ordinates : ");
-        scanf("%d %d", &x1, &y1);
+            initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
 
-        printf("Enter the end Co-ordinates : ");
-        scanf("%d %d", &x2, &y2);
+            printf("Enter the staring Co-ordinates : ");
+            scanf("%d %d", &x1, &y1);
 
-        printf("Enter the scaling Co-ordinates : ");
-        scanf("%d %d", &sx, &sy);
+            printf("Enter the end Co-ordinates : ");
+            scanf("%d %d", &x2, &y2);
 
-        rectangle(x1, y1, x2, y2);
-        rectangle(x1 * sx, y1 * sy, x2 * sx, y2 * sy);
+            printf("Enter the scaling Co-ordinates : ");
+            scanf("%d %d", &sx, &sy);
 
-        return EXIT_SUCCESS;
-    }
-```
+            rectangle(x1, y1, x2, y2);
+            rectangle(x1 * sx, y1 * sy, x2 * sx, y2 * sy);
+
+            return EXIT_SUCCESS;
+        }
+    ```
 ---
 
 ## 2D Rotation
@@ -80,39 +84,41 @@ where sx and sy are the scaling factors in the x and y direction respectively.
 
 ![](2d-rotation-l.jpg)
 
-```C
-    #include <stdio.h>
-    #include <graphics.h>
-    #include <math.h>
+=== "C"
 
-    int main() 
-    {
-        int gd = DETECT, gm;
-        int x1, y1, x2, y2, x3, y3, x4, y4, angle;
+    ```C
+        #include <stdio.h>
+        #include <graphics.h>
+        #include <math.h>
 
-        initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
+        int main() 
+        {
+            int gd = DETECT, gm;
+            int x1, y1, x2, y2, x3, y3, x4, y4, angle;
 
-        printf("Enter the staring Co-ordinates : ");
-        scanf("%d %d", &x1, &y1);
+            initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
 
-        printf("Enter the end Co-ordinates : ");
-        scanf("%d %d", &x2, &y2);
+            printf("Enter the staring Co-ordinates : ");
+            scanf("%d %d", &x1, &y1);
 
-        printf("Enter the rotation angle : ");
-        scanf("%d", &angle);
+            printf("Enter the end Co-ordinates : ");
+            scanf("%d %d", &x2, &y2);
 
-        x3 = x1 * cos(angle) - y1 * sin(angle);
-        y3 = x1 * sin(angle) + y1 * cos(angle);
+            printf("Enter the rotation angle : ");
+            scanf("%d", &angle);
 
-        x4 = x2 * cos(angle) - y2 * sin(angle);
-        y4 = x2 * sin(angle) + y2 * cos(angle);
+            x3 = x1 * cos(angle) - y1 * sin(angle);
+            y3 = x1 * sin(angle) + y1 * cos(angle);
 
-        rectangle(x1, y1, x2, y2);
-        rectangle(x3, y3, x4, y4);
+            x4 = x2 * cos(angle) - y2 * sin(angle);
+            y4 = x2 * sin(angle) + y2 * cos(angle);
 
-        return EXIT_SUCCESS;
-    }
-```
+            rectangle(x1, y1, x2, y2);
+            rectangle(x3, y3, x4, y4);
+
+            return EXIT_SUCCESS;
+        }
+    ```
 ---
 
 ## 2D Reflection
@@ -121,35 +127,37 @@ where sx and sy are the scaling factors in the x and y direction respectively.
 
 ![](mirror_reflection.bmp)
 
-```C
-    #include <stdio.h>
-    #include <graphics.h>
+=== "C"
+   
+    ```C
+        #include <stdio.h>
+        #include <graphics.h>
 
-    int main() 
-    {
-        int gd = DETECT, gm;
-        int x1, y1, x2, y2, x3, y3, x4, y4;
+        int main() 
+        {
+            int gd = DETECT, gm;
+            int x1, y1, x2, y2, x3, y3, x4, y4;
 
-        initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
+            initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
 
-        printf("Enter the staring Co-ordinates : ");
-        scanf("%d %d", &x1, &y1);
+            printf("Enter the staring Co-ordinates : ");
+            scanf("%d %d", &x1, &y1);
 
-        printf("Enter the end Co-ordinates : ");
-        scanf("%d %d", &x2, &y2);
+            printf("Enter the end Co-ordinates : ");
+            scanf("%d %d", &x2, &y2);
 
-        x3 = x1;
-        y3 = -y1;
+            x3 = x1;
+            y3 = -y1;
 
-        x4 = x2;
-        y4 = -y2;
+            x4 = x2;
+            y4 = -y2;
 
-        rectangle(x1, y1, x2, y2);
-        rectangle(x3, y3, x4, y4);
+            rectangle(x1, y1, x2, y2);
+            rectangle(x3, y3, x4, y4);
 
-        return EXIT_SUCCESS;
-    }
-```
+            return EXIT_SUCCESS;
+        }
+    ```
 ---
 
 ## 2D Shearing
@@ -162,30 +170,32 @@ where shx and shy are the shearing factors in the x and y direction respectively
 ![](xD.png)
 ![](yD.png)
 
-```C
-    #include <stdio.h>
-    #include <graphics.h>
+=== "C"
 
-    int main() 
-    {
-        int gd = DETECT, gm;
-        int x1, y1, x2, y2, shx, shy;
+    ```C
+        #include <stdio.h>
+        #include <graphics.h>
 
-        initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
+        int main() 
+        {
+            int gd = DETECT, gm;
+            int x1, y1, x2, y2, shx, shy;
 
-        printf("Enter the staring Co-ordinates : ");
-        scanf("%d %d", &x1, &y1);
+            initgraph(&gd, &gm, "C:\\Program Files (x86)\\Colorado\\cs1300\\bgi");
 
-        printf("Enter the end Co-ordinates : ");
-        scanf("%d %d", &x2, &y2);
+            printf("Enter the staring Co-ordinates : ");
+            scanf("%d %d", &x1, &y1);
 
-        printf("Enter the shearing Co-ordinates : ");
-        scanf("%d %d", &shx, &shy);
+            printf("Enter the end Co-ordinates : ");
+            scanf("%d %d", &x2, &y2);
 
-        rectangle(x1, y1, x2, y2);
-        rectangle(x1 + shx * y1, y1 + shy * x1, x2 + shx * y2, y2 + shy * x2);
+            printf("Enter the shearing Co-ordinates : ");
+            scanf("%d %d", &shx, &shy);
 
-        return EXIT_SUCCESS;
-    }
-```
+            rectangle(x1, y1, x2, y2);
+            rectangle(x1 + shx * y1, y1 + shy * x1, x2 + shx * y2, y2 + shy * x2);
+
+            return EXIT_SUCCESS;
+        }
+    ```
 ---
