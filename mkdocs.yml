@@ -26,6 +26,7 @@ nav:
     - Midpoint Circle Drawing Algorithm : Programs/midpoint.md
     - Boundary Fill Algorithm : Programs/boundry.md
     - Flood Fill Algorithm : Programs/flood.md  
+    - 2D Transformation : Programs/2dtransformations.md
     
 
 extra:
